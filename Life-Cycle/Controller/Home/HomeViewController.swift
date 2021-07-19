@@ -8,22 +8,41 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    // MARK: Outlets
+    @IBOutlet weak var returnButton: UIButton!
+    
+    // MARK: - Actions
+    @IBAction func returnButtonAction(_ sender: Any) {
+        let myViewController = MainViewController()
+        self.present(myViewController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Life Cycle
+    
+    // 1
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // 2
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
-    */
+    
+    // 3
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    // 4
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    // 5
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
 
 }
